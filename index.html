@@ -15,31 +15,33 @@
 </head>
 <body>
   <div class="center">
-  <div class="overlay">
-    <div class="loader"></div>
-  </div>
+    <div class="overlay">
+      <div class="loader"></div>
+    </div>
   <header class="navbarHidden">
       <nav>
         <div class="wrapper-header-img">
           <img src="imagens/logo1.png">
         </div>
-        <div class="mobile-menu" onclick="hold()">
+        <div class="mobile-menu">
           <div class="line1 h1"></div>
           <div class="line2 h1"></div>
           <div class="line3 h1"></div>
         </div>
         <ul class="nav-list " >
-          <li><a id="nav1" onclick="nav_list_click()" href="/">TEXTO</a></li>
-          <li><a id="nav2" onclick="nav_list_click()" href="/">TEXTO</a></li>
-          <li><a id="nav3" onclick="nav_list_click()" href="/">TEXTO</a></li>
-          <li><a id="nav4" onclick="nav_list_click()" href="/">TEXTO</a></li>
-          <li><a id="nav5" onclick="nav_list_click()" href="/">TEXTO</a></li>
+          <li><a id="nav1" onclick="nav_list_click()" href="#sobre">SOBRE</a></li>
+          <li><a id="nav2" onclick="nav_list_click()" href="#atuação">ATUAÇÃO</a></li>
+          <li><a id="nav3" onclick="nav_list_click()" href="#processos">PROCESSOS</a></li>
+          <li><a id="nav4" onclick="nav_list_click()" href="#aplicabilidade">APLICABILIDADE</a></li>
+          <li><a id="nav5" onclick="nav_list_click()" href="#contato">CONTATO</a></li>
         </ul>
       </nav>
   </header>
   <main>
-    
-    <section class="One">
+    <div id="wpp">
+      <a href="https://wa.me/5521992193853?text=ME%20AUTOMATIZE!!" target="_blank"> <img id="img-wpp" src="imagens/WhatsAppButtonGreenLarge.png"/> </a>
+    </div>
+    <section class="One" id="sobre">
       <div class="cookies-container">
         <div class="cookies-content">
           <div class="cookies-header">
@@ -58,12 +60,15 @@
         </div>
         <div class="TextosInformativos" fade-anime>
           <div class="wrapper-header">
-          <h1>AutoWork TITULO</h1>
-          
-        </div>
-          <h2> ○○○
-            </h2>
-          <p>TEXTO
+            <div class="titulo-estatico">AUTOWORK É</div>
+            <ui class="titulo-dinamico">
+              <li><span>AUTOMAÇÃO</span></li>
+              <li><span>PRODUÇÃO</span></li>
+              <li><span>EVOLUÇÃO</span></li>
+              <li><span>FACILIDADE</span></li>
+            </ui>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu orci accumsan enim cursus cursus non ut ante. Vestibulum consequat pulvinar orci eu feugiat. Nam id eleifend sapien. Duis tristique venenatis sapien, ac auctor lectus fringilla dapibus. Etiam mollis dignissim turpis, nec mollis augue gravida nec. Curabitur volutpat neque id fermentum molestie. Etiam non mauris lacinia, aliquet quam eu, tristique nibh. Phasellus tempor efficitur nulla eu tempus. Donec tristique volutpat metus id malesuada. Cras quis dolor non leo gravida semper imperdiet at turpis. Ut eu euismod erat. Donec scelerisque vel ipsum mattis dapibus.
           </p>
 
         </div>
@@ -87,44 +92,126 @@
       </div>
       
     </section>
-    <section class="Two" data-aos="fade-up">
-      <div class="icones" data-aos="fade-left" data-aos-duration="1000">
-        <input type="button" value="ONE" class="bOne">
-        <input type="button" value="TWO" class="bTwo">
-        <input type="button" value="THREE" class="bThree">
-        <input type="button" value="FOUR" class="bFour">
-      </div>
-      <div class="Cartao cOne" data-aos="fade-right" data-aos-duration="1000">
-
-        <div class="imagem-cartao"></div>
-        <div class="texto-cartao"></div>
-      </div>
-      <div class="Cartao cTwo" data-anime="left">
-
-        <div class="imagem-cartao"></div>
-        <div class="texto-cartao"></div>
-      </div>
-      <div class="Cartao cThree" data-anime="left">
-
-        <div class="imagem-cartao"></div>
-        <div class="texto-cartao"></div>
-      </div>
-      <div class="Cartao cFour" data-anime="left">
-
-        <div class="imagem-cartao"></div>
-        <div class="texto-cartao"></div>
-      </div>
-    </section>
+    <div id="atuação"></div>
     
-    <section class="Three">
-
-      <div class="wrap-container">
-        <div class="wrap-container-content">
+    <section class="Two" data-aos="fade-up">
+      <div class="icones" data-aos="fade-left" data-aos-duration="1000" > 
+        <div class="wrapper-icon" id="c1" onclick="processos(0)">
+          <div class="container-icone"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24"><path d="M18,10H14V3a1,1,0,0,0-1-1H8A1,1,0,0,0,7,3V8H3A1,1,0,0,0,2,9V21a1,1,0,0,0,1,1H18a1,1,0,0,0,1-1V11A1,1,0,0,0,18,10ZM7,20H4V10H7Zm5,0H9V4h3Zm5,0H14V12h3ZM21,4H20V3a1,1,0,0,0-2,0V4H17a1,1,0,0,0,0,2h1V7a1,1,0,0,0,2,0V6h1a1,1,0,0,0,0-2Z" fill="black"/></svg></div>
+          <div class="container-texto">
+            <a>Processos</a>
+          </div>
+        </div>
+        <div class="wrapper-icon" id="c2" onclick="processos(1)">
+          <div class="container-icone"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24"><path d="M13,16H7a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2ZM9,10h2a1,1,0,0,0,0-2H9a1,1,0,0,0,0,2Zm12,2H18V3a1,1,0,0,0-.5-.87,1,1,0,0,0-1,0l-3,1.72-3-1.72a1,1,0,0,0-1,0l-3,1.72-3-1.72a1,1,0,0,0-1,0A1,1,0,0,0,2,3V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12ZM5,20a1,1,0,0,1-1-1V4.73L6,5.87a1.08,1.08,0,0,0,1,0l3-1.72,3,1.72a1.08,1.08,0,0,0,1,0l2-1.14V19a3,3,0,0,0,.18,1Zm15-1a1,1,0,0,1-2,0V14h2Zm-7-7H7a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Z" fill="black"/></svg></div>
+          <div class="container-texto">
+            <a>Gerenciamento</a>
+          </div>
+        </div>
+        <div class="wrapper-icon" id="c3" onclick="processos(2)">
+          <div class="container-icone"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21,14H20V3a1,1,0,0,0-1-1H5A1,1,0,0,0,4,3V14H3a1,1,0,0,0,0,2h8v1.15l-4.55,3A1,1,0,0,0,7,22a.94.94,0,0,0,.55-.17L11,19.55V21a1,1,0,0,0,2,0V19.55l3.45,2.28A.94.94,0,0,0,17,22a1,1,0,0,0,.55-1.83l-4.55-3V16h8a1,1,0,0,0,0-2Zm-3,0H6V4H18ZM9,12a1,1,0,0,0,.83-.45l1.33-2,1.13,1.14a1,1,0,0,0,.81.29,1,1,0,0,0,.73-.45l2-3a1,1,0,0,0-1.66-1.1l-1.33,2L11.71,7.29A1,1,0,0,0,10.9,7a1,1,0,0,0-.73.45l-2,3a1,1,0,0,0,.28,1.38A.94.94,0,0,0,9,12Z" fill="black"/></svg></div>
+          <div class="container-texto">
+            <a>Automações</a>
+          </div>
           
         </div>
+        <div class="wrapper-icon" id="c4" onclick="processos(3)">
+          <div class="container-icone"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24"><path d="M22,15H20V12a1,1,0,0,0-1-1H13V9h2a1,1,0,0,0,1-1V2a1,1,0,0,0-1-1H9A1,1,0,0,0,8,2V8A1,1,0,0,0,9,9h2v2H5a1,1,0,0,0-1,1v3H2a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1H8a1,1,0,0,0,1-1V16a1,1,0,0,0-1-1H6V13H18v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V16A1,1,0,0,0,22,15ZM7,17v4H3V17ZM10,7V3h4V7ZM21,21H17V17h4Z" fill="black"/></svg></div>
+          <div class="container-texto">
+            <a>Escalamento</a>
+          </div>
+        </div>
       </div>
+      <div class="Cartao cOne" id="cc1" data-aos="fade-right" data-aos-duration="1000">
+        <div class="texto-cartao">
+          <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu orci accumsan enim cursus cursus non ut ante. Vestibulum consequat pulvinar orci eu feugiat. Nam id eleifend sapien. Duis tristique venenatis sapien, ac auctor lectus fringilla dapibus. Etiam mollis dignissim turpis, nec mollis augue gravida nec. Curabitur volutpat neque id fermentum molestie. Etiam non mauris lacinia, aliquet quam eu, tristique nibh. Phasellus tempor efficitur nulla eu tempus. Donec tristique volutpat metus id malesuada. Cras quis dolor non leo gravida semper imperdiet at turpis. Ut eu euismod erat. Donec scelerisque vel ipsum mattis dapibus.</a>
+        </div>
+        <div class="imagem-cartao"><img src=""></div>
+        
+      </div>
+      <div class="Cartao cTwo" id="cc2" data-aos="fade-right" data-aos-duration="1000">
 
+        <div class="texto-cartao">
+          <a>Vivamus finibus vestibulum lectus nec lacinia. Nulla vitae nisi urna. Sed vitae feugiat lacus, vel bibendum elit. Vestibulum porttitor lorem ac metus tempor, gravida aliquet dolor volutpat. Fusce eget est mauris. Sed quis dictum nunc, quis aliquam erat. Vivamus in porta elit. Sed commodo semper urna, ac rhoncus tortor sodales at. In in sagittis tortor. Nullam semper enim ac porttitor viverra. Praesent porta nec risus eu condimentum.</a>
+        </div>
+        <div class="imagem-cartao"><img src=""></div>
+      </div>
+      <div class="Cartao cThree" id="cc3" data-aos="fade-right" data-aos-duration="1000">
+
+        <div class="texto-cartao">
+          <a>Nunc placerat euismod ligula, quis rutrum ante egestas nec. Nulla mattis velit egestas mi sollicitudin bibendum. Aliquam orci risus, faucibus ac justo ut, tempus vehicula mi. Pellentesque nunc massa, aliquam eu eros a, consequat placerat elit. Morbi rhoncus ornare sapien sed condimentum. Aenean velit velit, tristique quis aliquam id, luctus non nunc. Fusce eu fermentum enim.</a>
+        </div>
+        <div class="imagem-cartao"><img src=""></div>
+      </div>
+      <div class="Cartao cFour" id="cc4" data-aos="fade-right" data-aos-duration="1000">
+
+        <div class="texto-cartao">
+          <a>Aenean in egestas neque. Aliquam mattis nibh sit amet ante bibendum dignissim. Quisque varius massa vitae justo iaculis finibus. Integer aliquam porttitor dolor ut efficitur. Integer porttitor, nibh vel pulvinar pharetra, diam arcu tristique libero, eget aliquet lorem erat nec nunc. Vestibulum maximus nibh eu orci molestie placerat. Curabitur lobortis risus vel enim mattis, eu semper nulla facilisis. Ut eu malesuada augue.</a>
+        </div>
+        <div class="imagem-cartao"><img src=""></div>
+        
+      </div>
       
+    </section>
+    <div id="processos"></div>
+    <section class="Three" data-aos="fade-up">
+
+      <div class="wrapper-master-three">
+        <div class="wrap-container-one" data-aos="fade-right" data-aos-duration="1000">
+          <h1>TEXTO</h1>
+        </div>
+        <div class="wrap-container-two" data-aos="fade-left" data-aos-duration="1000">
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="icone-three"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11,9h4a1,1,0,0,0,0-2H13V6a1,1,0,0,0-2,0V7a3,3,0,0,0,0,6h2a1,1,0,0,1,0,2H9a1,1,0,0,0,0,2h2v1a1,1,0,0,0,2,0V17a3,3,0,0,0,0-6H11a1,1,0,0,1,0-2Zm8-7H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V5A3,3,0,0,0,19,2Zm1,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z"/></svg></div>
+                <div class="wrapper-texto-three">
+                  <h1>TITULO</h1>
+                  <span>TEXTO</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="icone-three"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11,9h4a1,1,0,0,0,0-2H13V6a1,1,0,0,0-2,0V7a3,3,0,0,0,0,6h2a1,1,0,0,1,0,2H9a1,1,0,0,0,0,2h2v1a1,1,0,0,0,2,0V17a3,3,0,0,0,0-6H11a1,1,0,0,1,0-2Zm8-7H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V5A3,3,0,0,0,19,2Zm1,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z"/></svg></div>
+                <div class="wrapper-texto-three">
+                  <h1>TITULO</h1>
+                  <span>TEXTO</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="icone-three"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11,9h4a1,1,0,0,0,0-2H13V6a1,1,0,0,0-2,0V7a3,3,0,0,0,0,6h2a1,1,0,0,1,0,2H9a1,1,0,0,0,0,2h2v1a1,1,0,0,0,2,0V17a3,3,0,0,0,0-6H11a1,1,0,0,1,0-2Zm8-7H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V5A3,3,0,0,0,19,2Zm1,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z"/></svg></div>
+                <div class="wrapper-texto-three">
+                  <h1>TITULO</h1>
+                  <span>TEXTO</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="icone-three"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11,9h4a1,1,0,0,0,0-2H13V6a1,1,0,0,0-2,0V7a3,3,0,0,0,0,6h2a1,1,0,0,1,0,2H9a1,1,0,0,0,0,2h2v1a1,1,0,0,0,2,0V17a3,3,0,0,0,0-6H11a1,1,0,0,1,0-2Zm8-7H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V5A3,3,0,0,0,19,2Zm1,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z"/></svg></div>
+                <div class="wrapper-texto-three">
+                  <h1>TITULO</h1>
+                  <span>TEXTO</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="icone-three"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11,9h4a1,1,0,0,0,0-2H13V6a1,1,0,0,0-2,0V7a3,3,0,0,0,0,6h2a1,1,0,0,1,0,2H9a1,1,0,0,0,0,2h2v1a1,1,0,0,0,2,0V17a3,3,0,0,0,0-6H11a1,1,0,0,1,0-2Zm8-7H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V5A3,3,0,0,0,19,2Zm1,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z"/></svg></div>
+                <div class="wrapper-texto-three">
+                  <h1>TITULO</h1>
+                  <span>TEXTO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination-two"></div>
+      <h1 data-aos="fade-up">AUTOMATIZE QUALQUER PROCESSO</h1>
+      <div class="bottom-three">
+        
+        <div class="video-three" data-aos="fade-up">
+          <img href="imagens/satoru-gojo-jujutsu.jpg">
+        </div>
+        <div class="video-three" data-aos="fade-up">
+          <img href="imagens/Escanor.jpg">
+      </div>
      
     </section>
 
@@ -132,7 +219,7 @@
   
   </main>
 
-  <footer>
+  <footer id="contato">
     <div class="footer-content">
     <div class="contato" data-aos="fade-down">
       <h2>Fale conosco</h2>
@@ -150,10 +237,7 @@
       <p>Venha conhecer uma das empresas pioneiras em automação!
       </p>
       </div>
-      <!-- <a href="https://www.vidalinktech.com/" target="_blank">VidaLink</a>
-      <ul class="socials">
-          <li><a href="#" style="border: none;"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#" style="border: none;"><i class="fa fa-twitter"></i></a></li>
+      <!--<ul class="socials">
           <li><a href="#" style="border: none;"><i class="fa fa-youtube"></i></a></li>
       </ul> -->
     
@@ -179,6 +263,25 @@
         clickable: true,
       },
     });
+</script>
+<script>
+  var swiper = new Swiper(".mySwiper2", {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -400],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+    pagination: {
+        el: ".swiper-pagination-two",
+        clickable: true,
+      },
+  });
 </script>
 <script>
   AOS.init();

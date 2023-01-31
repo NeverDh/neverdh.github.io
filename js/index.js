@@ -1,13 +1,6 @@
-let navbar = document.getElementsByClassName("navbarHidden")
-let el = document.getElementsByClassName("nav-list")
-let el_active = document.getElementsByClassName("nav-list active")
-var mobA = document.getElementsByClassName("mobile-menu active")
-var mob = document.getElementsByClassName("mobile-menu")
-var i = 0
 
 
-
-// -----------------------------LOADER E COOKIES--------------------------------- //
+// -----------------------------INICIO LOADER E COOKIES--------------------------------- //
 
 const overlay = document.querySelector(".overlay");
 const cook = document.querySelector(".cookies-container")
@@ -20,10 +13,16 @@ function tirar(){
     overlay.style.display="none";
     
 }
-// -----------------------------LOADER E COOKIES--------------------------------- //
+// -----------------------------FIM LOADER E COOKIES--------------------------------- //
 
+// -----------------------------INICIO ANIMAÇÃO HEADER------------------------------- //
 
-
+let navbar = document.getElementsByClassName("navbarHidden")
+let el = document.getElementsByClassName("nav-list")
+let el_active = document.getElementsByClassName("nav-list active")
+var mobA = document.getElementsByClassName("mobile-menu active")
+var mob = document.getElementsByClassName("mobile-menu")
+var i = 0
 
 function nav_list_click(){
     let el = document.getElementsByClassName("nav-list")
@@ -35,19 +34,21 @@ function nav_list_click(){
 }
 
 window.onload = function alterar_nav(){
-    loadStorage = sessionStorage.getItem('id_nav');
+    loadStorageNav = sessionStorage.getItem('id_nav');
 
     for(i =1; i<=5; i++){
         let navs = document.getElementById("nav" + i)
         
-        if(navs.id == loadStorage){
+        if(navs.id == loadStorageNav){
             navs.style.color='#FFD700'
             navs.style.transition="0s"
             break
         }
     }
 
-    // -----------------------------LOADER E COOKIES--------------------------------- //
+    
+
+    // -----------------------------INICIO LOADER E COOKIES--------------------------------- //
 
     overlay.style.transition = "1s";
     overlay.style.opacity = 0;
@@ -56,11 +57,9 @@ window.onload = function alterar_nav(){
     cookCon.style.display="grid"
     setTimeout(tirar, 500)
 
-    // -----------------------------LOADER E COOKIES--------------------------------- //
-    
+    // -----------------------------FIM LOADER E COOKIES--------------------------------- //
+    setTimeout(animaWpp, 2000)
 }
-
-
 
 
 // function hide (){
@@ -93,6 +92,12 @@ window.onload = function alterar_nav(){
 //         hider = setInterval(hide, 10000)
 //     }
 // }
+
+// window.addEventListener("scroll", show())
+// -----------------------------FIM ANIMAÇÃO HEADER------------------------------- //
+
+
+// -------------------------------------INICIO ANIMAÇÃO COM SCROLL----------------------------------//
 
 const fade = document.querySelectorAll('[fade-anime');
 const alvo2 = document.querySelectorAll('[data-anime="att"]');
@@ -134,14 +139,76 @@ window.addEventListener('scroll', function(){
 })
 
 
-//FUNÇÃO DE ESPERA
-function syncDelay(milliseconds){
-    var start = new Date().getTime();
-    var end=0;
-    while( (end-start) < milliseconds){
-        end = new Date().getTime();
+
+
+// -------------------------------------FIM ANIMAÇÃO COM SCROLL---------------------------------- //
+
+
+// -------------------------------------INICIO ANIMAÇÃO PROCESSOS-------------------------------- //
+
+let csOne = document.getElementById("cc" + 1)
+let csTwo = document.getElementById("cc" + 2)
+let csThree = document.getElementById("cc" + 3)
+let csFour = document.getElementById("cc" + 4)
+
+
+function processos(num){
+    let process = document.getElementsByClassName("wrapper-icon")
+    for(let i = 0; i <= process.length; i++){
+        if(num == i){
+            sessionStorage.setItem('id_car', process[i].id)
+            break
+        }
     }
-   }
+    loadStorageCar = sessionStorage.getItem('id_car');
+    loadStorageCar = "cc" + loadStorageCar.slice(-1);
+    csOne.style.transform = 'translate(-100vw)'
+    csOne.style.display = 'none'
+    csTwo.style.transform = 'translate(-100vw)'
+    csTwo.style.display = 'none'
+    csThree.style.transform = 'translate(-100vw)'
+    csThree.style.display = 'none'
+    csFour.style.transform = 'translate(-100vw)'
+    csFour.style.display = 'none'
+    for(i =1; i<=process.length; i++){
+        let cs = document.getElementById("cc" + i)
+        if(cs.id == loadStorageCar){
+            cs.style.display = 'flex'
+            cs.style.transition = 'all 1s'
+            cs.style.transform = 'translate(0)'
+            break
+        }
+    }
 
 
-window.addEventListener("scroll", show)
+    loadStorageCar = sessionStorage.getItem('id_car');
+
+    for(i =1; i<=5; i++){
+        let csFive = document.getElementById("c" + i)
+        
+        if(csFive.id == loadStorageCar){
+            csFive.style.backgroundColor='#FFD700'
+            csFive.style.transition="all 1s"
+        }
+        else{
+            csFive.style.backgroundColor='transparent'
+            csFive.style.transition="all 1s"
+        }
+    }
+    
+}
+
+// -------------------------------------FIM ANIMAÇÃO PROCESSOS-------------------------------- //
+
+// -------------------------------------INICIO ANIMAÇÃO WHATSAPP------------------------------ //
+
+function animaWpp(){
+    let wpp = document.getElementById("wpp")
+    wpp.style.transition = 'all 1s'
+    wpp.style.position = "fixed"
+    wpp.style.opacity = "1"
+    wpp.style.top = "inherit"
+    wpp.style.bottom = "0"
+}
+
+// -------------------------------------FIM ANIMAÇÃO WHATSAPP--------------------------------- //

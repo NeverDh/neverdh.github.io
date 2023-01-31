@@ -3,10 +3,10 @@
     margin: 0;
     color: white;
     font-family: 'League Spartan', sans-serif;
+    box-sizing: border-box;
 }
 
 body{
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,6 +14,27 @@ body{
     width: 100%;
     height: auto;
 
+
+}
+
+#wpp{
+    z-index: 9999;
+    position: fixed;
+    top: -10vw;
+    bottom: 0;
+    right: 0;
+    width: 8vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    padding: 0.5%;
+    opacity: 0;
+}
+
+#img-wpp{
+    width: 100%;
+    height: 100%;
 }
 
 .center{
@@ -87,7 +108,7 @@ body{
 .cookies-save:hover{
     background-color: #000;
     color: #FFD700;
-    border: 1px solid #FFD700;
+    border: 2px solid #FFD700;
 }
 
 .cookies-save:active{
@@ -123,8 +144,8 @@ body{
 .loader{
     top: 40vh;
     position: fixed;
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #3498db; 
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -149,7 +170,6 @@ a{
 }
 
 nav a:hover{
-    opacity: 0.7;
     color:#FFD700;
 }
 
@@ -170,7 +190,7 @@ nav img{
 
 
 nav{
-    background-color: #000;
+    background-color:#000;
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -188,15 +208,15 @@ nav{
 .nav-list{
     list-style: none;
     display: flex;
-    margin-right: 5%;
+    margin-right: 5vw;
 }
 .nav-list li{
     
     
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     margin-left: 20px;
     margin-top: 10px;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 
     
 }
@@ -243,7 +263,6 @@ main{
 }
 
 .One .TextosInformativos{
-    float: left;
     margin-top: 10vh;
     margin-left: 5vw;
     color: #FFFFFF;
@@ -257,6 +276,10 @@ main{
 
 .wrapper-one{
     height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .wrapper-header{
@@ -265,6 +288,65 @@ main{
     text-align: center;
     align-items: center;
     justify-content: center;
+    padding: 5%;
+}
+
+.titulo-estatico{
+    Color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.titulo-dinamico{
+    margin-left: 10px;
+    overflow: hidden;
+    height: 40px;
+    line-height:40px;
+}
+
+.titulo-dinamico li{
+    color: #FFD700;
+    list-style: none;
+    font-size: 30px;
+    font-weight: 500;
+    left: 0;
+    position: relative;
+    top:0;
+    animation: slide 8s steps(4) infinite;
+    text-align: left;
+
+}
+
+@keyframes slide{
+    100%{
+        top: -160px;
+    }
+}
+
+.titulo-dinamico li span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    left: 0;
+    background-color:#000;
+    border-left: 2px solid #FFD700;
+    animation: typing-titler 2s steps(20) infinite;
+}
+
+.titulo-dinamico li span{
+    position: relative;
+}
+
+@keyframes typing-titler {
+    50%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+
+    100%{
+        left: 0;
+    }
 }
 
 .One .TextosInformativos h1{
@@ -292,7 +374,6 @@ main{
 }
 
 .One-Image{
-    float: right;
     margin-top: 10vh;
     margin-right: 5vw;
     color: #FFFFFF;
@@ -343,42 +424,85 @@ main{
 
 .Two{
 
-    height: 80vh;
+    height: 85vh;
     display: flex;
     width: 90%;
     justify-content: center;
     align-items: center;
     background-color:#DFDFDF;
     margin: 0 auto;
-    margin-top: 5vh;
+    margin-top: 10vh;
     flex-direction: column;
+    transition: all 1s;
     
 }
 
 .icones{
-    width: 40%;
+    width: 50%;
     height: 10%;
-    background-color: #000;
     margin: 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
+
     
 
 }
 
-.icones input[type="button"]{
-    width: 20%;
-    height: 60%;
-    background-color: #01A1FF;
+.wrapper-icon{
+    width: 24%;
+    height: 100%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 1s;
+    padding: 2%;
+
 }
+
+.wrapper-icon:hover{
+    background-color:#FFD700;
+}
+
+
+
+
+.container-texto{
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ;
+    
+}
+
+.container-texto a{
+    color:#000;
+    font-size: 17px;
+}
+
+.container-icone{
+    width: 100%;
+    height: 60%;
+}
+
+.container-icone svg{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 .Cartao{
     width:90%;
     height: 80%;
-    background-color:white;
     text-align: center;
     color: black;
     z-index: 2;
@@ -390,20 +514,34 @@ main{
 }
 
 .imagem-cartao{
-    width: 45%;
+    width: 50%;
     height: 100%;
-    background-color: #000;
+    padding: 5%;
+
+}
+
+.imagem-cartao img{
+    width: 100%;
+    height: 100%;
 }
 
 .texto-cartao{
-    width: 45%;
+    width: 50%;
     height: 100%;
-    background-color: #000;
+    text-align: justify;
+    color: white;
+    font-size: 24px;
+    padding: 5%;
+}
+
+.texto-cartao a{
+    color: #000;
 }
 
 .cTwo, .cThree, .cFour{
     display: none;
 }
+
 
 [fade-anime]{
     opacity: 0;
@@ -445,30 +583,142 @@ main{
     
 }
 
+
+
 .Three{
-    height: 90vh;
+    height: 85vh;
     width: 100%;
-    height: 90vh;
     z-index: 1;
-}
-
-.wrap-container{
-    width: 100%;
-    height: 335px;
+    margin-top: 10vh;
     display: flex;
-    margin-top: 50px;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+
+.Three h1{
+    margin-top: 5vh;
+}
+
+.wrapper-master-three{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: row;
 
 }
 
-
-.wrap-container-content{
-    width: 50%;
+.wrap-container-one{
+    width: 40%;
     height: 100%;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.wrap-container-one h1{
+    color: white;
+    margin: 0;
+}
+
+.wrap-container-two{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mySwiper2{
+
+    height: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     
+}
+
+.mySwiper2 .swiper-wrapper .swiper-slide{
+    height: 25vh;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icone-three{
+    width: 12%;
+    height: 30%;
+    position:absolute;
+    left:5%;
+    top: 5%;
+}
+
+.icone-three svg{
+    width: 100%;
+    height:100%;
+}
+
+.wrapper-texto-three{
+    width: 90%;
+    height: 60%;
+    position:absolute;
+    top: 35%;
+    left:5%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2%;
+    
+
+}
+
+.wrapper-texto-three h1{
+    color: #000;
+    margin:0;
+}
+
+.wrapper-texto-three span{
+    margin-top: 5%;
+    color: #000;
+}
+
+.swiper-pagination-two{
+    margin-top: 1vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination-two span{ 
+    background-color: #FFD700;
+}
+
+.bottom-three{
+    margin-top: 1%;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.video-three{
+    width: 50%;
+    height: 100%;
+    padding: 2%;
+    z-index: 1;
+}
+
+.video-three img{
+    width: 100%;
+    height: 100%;
+
 }
 
 
@@ -534,13 +784,15 @@ footer{
     color: aqua;
 } */
 .footer-bottom{
-    width: 100%;
+    border-top: 1px solid #FFD700;
+    width: 90%;
     text-align: center;
     height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0 auto;
 }
 .footer-bottom p{
     font-size: 14px;
@@ -596,22 +848,21 @@ footer{
 
 /*-----------------------------------------------INICIO MEDIA QUERIES--------------------------------------------------*/
 
-@media handheld, only screen and (max-width: 1200px){
+@media handheld, only screen and (max-width: 1024px){
     .nav-list{
         position: absolute;
         top: 10vh;
         right: 0;
         width: 50vh;
-        height: 100vh;
-        backdrop-filter: blur(10px);
+        height: 90vh;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
         text-align: center;
-        background-color: #DFDFDF;
-        opacity: 0.7;
+        background-color: black;
+        margin-right: 0;
     }
     .nav-list li{
         margin-left: 0;
@@ -621,7 +872,7 @@ footer{
 
     .mobile-menu{
         display: block;
-        
+        margin-right: 5vw;
         
     }
 }
