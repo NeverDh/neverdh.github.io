@@ -11,7 +11,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" href="imagens/logo3.png" type="image/png">
+    <link rel="icon" href="imagens/logo1.png" type="image/png">
 </head>
 <body>
   <div class="center">
@@ -29,11 +29,11 @@
           <div class="line3 h1"></div>
         </div>
         <ul class="nav-list " >
-          <li><a id="nav1" onclick="nav_list_click()" href="#sobre">SOBRE</a></li>
-          <li><a id="nav2" onclick="nav_list_click()" href="#atuação">ATUAÇÃO</a></li>
-          <li><a id="nav3" onclick="nav_list_click()" href="#processos">PROCESSOS</a></li>
-          <li><a id="nav4" onclick="nav_list_click()" href="#aplicabilidade">APLICABILIDADE</a></li>
-          <li><a id="nav5" onclick="nav_list_click()" href="#contato">CONTATO</a></li>
+          <li><a id="nav1" href="#sobre">SOBRE</a></li>
+          <li><a id="nav2" href="#atuação">ATUAÇÃO</a></li>
+          <li><a id="nav3" href="#processos">PROCESSOS</a></li>
+          <li><a id="nav4" href="#aplicabilidade">APLICABILIDADE</a></li>
+          <li><a id="nav5" href="#contato">CONTATO</a></li>
         </ul>
       </nav>
   </header>
@@ -41,7 +41,8 @@
     <div id="wpp">
       <a href="https://wa.me/5521992193853?text=ME%20AUTOMATIZE!!" target="_blank"> <img id="img-wpp" src="imagens/WhatsAppButtonGreenLarge.png"/> </a>
     </div>
-    <section class="One" id="sobre">
+    <div id="sobre"></div>
+    <section class="One">
       <div class="cookies-container">
         <div class="cookies-content">
           <div class="cookies-header">
@@ -203,8 +204,8 @@
         </div>
       </div>
       <div class="swiper-pagination-two"></div>
-      <h1 data-aos="fade-up">AUTOMATIZE QUALQUER PROCESSO</h1>
-      <div class="bottom-three">
+        <h1 data-aos="fade-up">AUTOMATIZE QUALQUER PROCESSO</h1>
+        <div class="bottom-three">
         
         <div class="video-three" data-aos="fade-up">
           <img href="imagens/satoru-gojo-jujutsu.jpg">
@@ -212,45 +213,95 @@
         <div class="video-three" data-aos="fade-up">
           <img href="imagens/Escanor.jpg">
       </div>
+      </div>
      
     </section>
-
+    <div id="aplicabilidade"></div>
+    <section class="Four">
+      <div class="wrapper-texto-four">
+        <h1>TEXTO</h1>
+      </div>
+      
+      <div class="wrapper-four">
+        <div class="wrapper-four-left">
+          <h1>TEXTO</h1>
+        </div>
+        <div class="wrapper-four-right">
+          <img src="imagens/design 2.svg">
+        </div>
+      </div>
+      
+    </section>
     
   
   </main>
+  <section class="Five">
+    <div class="five-wrapper">
+      <form action="https://formsubmit.co/testeluis@autowork.dev.br" method="POST" class="card">
+        <!-- <input type="hidden" name="accessKey" value="178c6f07-e9e9-4cd6-9f1d-cf2aaef04377"> -->
+        <input type="hidden" name="_subject" value="CONTATO AUTOWORK" />
+        <input type="hidden" name="_captcha" value="false">
+        <div class="card-wrapper">
+          <label for="inputNome">Nome completo</label>
+          <input type="text" id="inputNome" name="name" required>
+          <span></span>
+        </div>
+        <div class="card-wrapper">
+          <label for="inputEmail">Endereço de email</label>
+          <input type="email" id="inputEmail" name="email" required>
+          <span></span>
+        </div>
+        <div class="card-wrapper">
+          <label for="inputCelular">Celular</label>
+          <input type="number" id="inputCelular" name="phone">
+          <span></span>
+        </div>
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#contato">
+        <div class="card-wrapper">
+          <button type="submit">Enviar</button>
+        </div>
+        <!-- <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html?#contato"> -->
+      </form>
 
-  <footer id="contato">
-    <div class="footer-content">
-    <div class="contato" data-aos="fade-down">
-      <h2>Fale conosco</h2>
-      <p>Entre em contato</p>
-      <p >AutoWork</p>
-    </div>
-    <!-- <div class="sobre" data-anime="up">
-      <h2>Sobre</h2>
-      <p>TEXTO</p>
-    
-    </div> -->
-  </div>
-      <div class="wrap-footer" data-aos="fade-down">
-      <h3>TEXTO</h3>
-      <p>Venha conhecer uma das empresas pioneiras em automação!
-      </p>
+      <div class="five-texto-form">
+        <h1>TEXTO</h1>
       </div>
-      <!--<ul class="socials">
-          <li><a href="#" style="border: none;"><i class="fa fa-youtube"></i></a></li>
-      </ul> -->
-    
-    <div class="footer-bottom">
-      <p>Copyright &copy;2023 Todos os direitos reservados a AutoWork</p>
     </div>
-  </footer>
+    <footer id="contato">
+      <div class="footer-content">
+      <div class="contato" data-aos="fade-down">
+        <h2>Fale conosco</h2>
+        <p>Entre em contato</p>
+        <p >AutoWork</p>
+      </div>
+      <!-- <div class="sobre" data-anime="up">
+        <h2>Sobre</h2>
+        <p>TEXTO</p>
+      
+      </div> -->
+    </div>
+        <div class="wrap-footer" data-aos="fade-down">
+        <h3>TEXTO</h3>
+        <p>Venha conhecer uma das empresas pioneiras em automação!
+        </p>
+        </div>
+        <!--<ul class="socials">
+            <li><a href="#" style="border: none;"><i class="fa fa-youtube"></i></a></li>
+        </ul> -->
+      
+      <div class="footer-bottom">
+        <p>Copyright &copy;2023 Todos os direitos reservados a AutoWork</p>
+      </div>
+    </footer>
+  </section>
   <script src="js/index.js"></script>
   <script src="js/mobile-navbar.js"></script>
   <script src="js/cookies.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
@@ -284,7 +335,9 @@
   });
 </script>
 <script>
-  AOS.init();
+  AOS.init({
+    once: true
+  });
 </script>
 </div>
   </body>
