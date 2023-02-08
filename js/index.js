@@ -202,7 +202,7 @@ function processos(num){
 
     loadStorageCar = sessionStorage.getItem('id_car');
 
-    for(i =1; i<=5; i++){
+    for(i =1; i<=4; i++){
         let csFive = document.getElementById("c" + i)
         
         if(csFive.id == loadStorageCar){
@@ -225,7 +225,6 @@ function animaWpp(){
     let wpp = document.getElementById("wpp")
     wpp.style.transition = 'all 1s'
     wpp.style.position = "fixed"
-    wpp.style.opacity = "1"
     wpp.style.top = "inherit"
     wpp.style.bottom = "0"
 }
