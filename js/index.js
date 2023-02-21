@@ -15,25 +15,6 @@ function tirar(){
 }
 // -----------------------------FIM LOADER E COOKIES--------------------------------- //
 
-// -----------------------------INICIO ANIMAÇÃO HEADER------------------------------- //
-
-let navbar = document.getElementsByClassName("navbarHidden")
-let el = document.getElementsByClassName("nav-list")
-let el_active = document.getElementsByClassName("nav-list active")
-var mobA = document.getElementsByClassName("mobile-menu active")
-var mob = document.getElementsByClassName("mobile-menu")
-var i = 0
-
-function nav_list_click(){
-    let el = document.getElementsByClassName("nav-list")
-
-    el[0].addEventListener('click', function(e){
-        idElemento = e.target.id
-        sessionStorage.setItem('id_nav', idElemento);
-    });
-    alterar_nav()
-}
-
 window.onload = function() {
 
     
@@ -50,70 +31,6 @@ window.onload = function() {
     // -----------------------------FIM LOADER E COOKIES--------------------------------- //
     setTimeout(animaWpp, 2000)
 }
-
-// function alterar_nav(){
-//     loadStorageNav = sessionStorage.getItem('id_nav');
-//     let navOne = document.getElementById("nav1")
-//     let navTwo = document.getElementById("nav2")
-//     let navThree = document.getElementById("nav3")
-//     let navFour = document.getElementById("nav4")
-//     let navFive = document.getElementById("nav5")
-//     navOne.style.color='#FFFFFF'
-//     navOne.style.transition="1s"
-//     navTwo.style.color='#FFFFFF'
-//     navTwo.style.transition="1s"
-//     navThree.style.color='#FFFFFF'
-//     navThree.style.transition="1s"
-//     navFour.style.color='#FFFFFF'
-//     navFour.style.transition="1s"
-//     navFive.style.color='#FFFFFF'
-//     navFive.style.transition="1s"
-
-    
-//     for(i =1; i<=5; i++){
-//         let navs = document.getElementById("nav" + i)
-        
-//         if(navs.id == loadStorageNav){
-//             navs.style.color='#FFD700'
-//             navs.style.transition="1s"
-//             break
-//         }
-//     }
-// }
-
-// function hide (){
-//     navbar[0].style.position="absolute"
-//     navbar[0].style.marginTop="-12vh"
-    
-    
-// }
-
-// var hider = setInterval(hide, 10000)
-
-// function show (){
-//     navbar[0].style.marginTop="0vh"
-    
-// }
-
-// function hold (){
-//     clearInterval(hider)
-//     if(mobA[0] == undefined){
-//         if (i === 0){
-//             i = 1
-//         }else{
-//             i++
-//         }
-
-//         if( i % 2 != 0 ){
-//             navbar[0].style.marginTop="0vh"
-//         }
-//     }else{
-//         hider = setInterval(hide, 10000)
-//     }
-// }
-
-// window.addEventListener("scroll", show())
-// -----------------------------FIM ANIMAÇÃO HEADER------------------------------- //
 
 
 // -------------------------------------INICIO ANIMAÇÃO COM SCROLL----------------------------------//
@@ -247,16 +164,6 @@ function teste(){
     let navThree = document.getElementById("nav3")
     let navFour = document.getElementById("nav4")
     let navFive = document.getElementById("nav5")
-    // var convertPx2 = {
-    //     vh: function(px){
-    //       px = parseFloat(px);
-    //       var wh = $(window).height(); // captura a altura da viewport
-      
-    //       // faz a relação de  porcentagem dos pixels informados
-    //       // com a altura da viewport
-    //       return (px*100)/wh;
-    //     }
-    // }
 
     var divOne = document.querySelector(".One")
     var alturaOne = parseInt(divOne.clientHeight, 10)
