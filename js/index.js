@@ -26,7 +26,7 @@ window.onload = function() {
     body.style.overflowY="visible";
     cook.style.display="flex"
     cookCon.style.display="grid"
-    setTimeout(tirar, 500)
+    tirar
 
     // -----------------------------FIM LOADER E COOKIES--------------------------------- //
     setTimeout(animaWpp, 2000)
@@ -41,7 +41,7 @@ const alvo = document.querySelectorAll('[data-anime]');
 const alvo3 = document.querySelectorAll('[data-anime="p"]');
 const animetionClass = 'animate';
 
-setTimeout(aparecer, 1000)
+setTimeout(aparecer, 100)
 
 function aparecer (){
     fade.forEach(function(e){

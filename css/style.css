@@ -156,30 +156,25 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(51, 51, 51);
+    background-color: black;
     width: 100%;
-    height: 200%;
-    z-index: 999;
+    height: 100%;
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .loader{
-    top: 40vh;
-    position: fixed;
-    border: 16px solid #f3f3f3; 
-    border-top: 16px solid #3498db; 
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    border:16px solid;
+    border-color:#FFD700 #0000;
+    animation:s1 1s infinite;
  }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+@keyframes s1 {to{transform: rotate(.5turn)}}
 
 .navbarHidden{
     transition: all 1s;
@@ -389,13 +384,13 @@ main{
 
 .wrapper-texto-one p{
     text-align:left;
-    font-size: 3vh;
+    font-size: 2.5vh;
     color: #FFFFFF;
 }
 
 .texto-dourado{
     text-align:left;
-    font-size: 3vh;
+    font-size: 2.5vh;
     color: #FFD700 !important;
 }
 
@@ -537,8 +532,8 @@ main{
 }
 
 .container-texto a{
-    color:#000;
-    font-size: 20px;
+    color:#000000;
+    font-size: 2vh;
 }
 
 .container-icone{
@@ -549,8 +544,9 @@ main{
 }
 
 .container-icone img{
+    margin-top: 5%;
     width: auto;
-    height: 100%;
+    height: 80%;
 }
 
 
@@ -599,8 +595,7 @@ main{
 
 .texto-cartao ul li{
     color: #000;
-    font-size: 4vh;
-    
+    font-size: 3vh;
 }
 
 .cTwo, .cThree, .cFour{
@@ -751,12 +746,11 @@ main{
 
 .wrapper-texto-three h1{
     color: #000;
-    margin-top: 1%;
     font-size: 3vh;
 }
 
 .wrapper-texto-three span{
-    margin-top: 3%;
+    margin-top: 1%;
     color: #000;
     font-size: 2.5vh;
 }
@@ -899,6 +893,7 @@ main{
     transition: all 1s;
     height: 10vh;
     margin: 1%;
+    min-height: 50px;
 }
 
 .card-wrapper input{
@@ -909,20 +904,22 @@ main{
     font-size: 18px;
     padding: 2%;
     border-radius: 20px;
+    min-height: 40px;
 }
 
 .card-wrapper textarea{
     outline: none;
     color:#000;
     font-size: 18px;
-    padding: 5%;
+    padding: 3%;
     border-radius: 20px;
     resize: vertical;
     max-height: 15vh;
-    min-height: 5vh;
+    min-height: 40px;
     max-width: 100%;
     width: 100%;
     overflow: hidden;
+
 }
 
 .card-wrapper button{
@@ -932,6 +929,7 @@ main{
     background-color: #000;
     transition: all 1s;
     border-radius: 20px;
+    min-height: 40px;
 }
 
 .card-wrapper button:hover{
@@ -949,6 +947,7 @@ main{
     padding: 2%;
     border-radius: 20px;
     cursor: pointer;
+    min-height: 40px;
 }
 
 .card-wrapper option{
@@ -958,6 +957,7 @@ main{
     color:#000;
     font-size: 18px;
     border-radius: 20px;
+    min-height: 40px;
 }
 
 
@@ -973,7 +973,7 @@ main{
 footer{
     width: 100%;
     color: #fff;
-    height: 35vh;
+    height: 60vh;
     text-align: center;
 }
 
@@ -1091,12 +1091,38 @@ footer{
 
 /*-----------------------------------------------INICIO MEDIA QUERIES--------------------------------------------------*/
 
+@media all and (max-width: 1600px){
+    .wrapper-texto-one p{
+        text-align:left;
+        font-size: 2vh;
+        color: #FFFFFF;
+    }
+    
+    .texto-dourado{
+        text-align:left;
+        font-size: 2vh;
+        color: #FFD700 !important;
+    }
+
+    .wrapper-texto-three h1{
+        color: #000;
+        font-size: 2vh;
+    }
+    
+    .wrapper-texto-three span{
+        margin-top: 1%;
+        color: #000;
+        font-size: 2vh;
+    }
+    
+}
+
 @media all and (max-width: 1024px){
     .nav-list{
         position: absolute;
         top: 10vh;
         right: 0;
-        width: 50vh;
+        width: 70vw;
         height: 90vh;
         flex-direction: column;
         align-items: center;
@@ -1135,16 +1161,22 @@ footer{
 
     .wrapper-texto-one p{
         text-align:left;
-        font-size: 2.5vh;
+        font-size: 1.7vh;
         color: #FFFFFF;
     }
     
     .texto-dourado{
         text-align:left;
-        font-size: 2.5vh;
+        font-size: 1.7vh;
         color: #FFD700 !important;
     }
 
+    .wrap-container-one h1{
+        color: white;
+        margin: 0;
+        font-size: 3vh;
+        width: 70%;
+    }
     
 }
 
@@ -1152,13 +1184,15 @@ footer{
 
     
     .titulo-estatico, .titulo-dinamico li{
-        font-size: 2.5vh;
+        font-size: 2vh;
     }
 
     .titulo-dinamico li span::after{
         bottom: -0.5vh;
 
     }
+
+    
 
 
     /* TWO */
@@ -1530,13 +1564,13 @@ footer{
 
     .wrapper-texto-one p{
         text-align:left;
-        font-size: 2vh;
+        font-size: 1.7vh;
         color: #FFFFFF;
     }
     
     .texto-dourado{
         text-align:left;
-        font-size: 2vh;
+        font-size: 1.7vh;
         color: #FFD700 !important;
     }
       
@@ -1556,8 +1590,8 @@ footer{
     }
     
     .wrapper-icon{
-        width: 30%;
-        height: 100%;
+        width: 40%;
+        height: 80%;
         flex-direction: column;
         justify-content: center;
     
@@ -1588,13 +1622,13 @@ footer{
     }
     
     .container-icone{
-        width: 80%;
-        height: 40%;
+        width: 100%;
+        height: 50%;
     }
     
-    .container-icone svg{
-        width: 100%;
-        height: 100%;
+    .container-icone img{
+        width: 80%;
+        height: 80%;
     }
     
     
@@ -1631,8 +1665,7 @@ footer{
         height: 50%;
         text-align: left;
         color: white;
-        font-size: 2.6vh;
-        padding: 5%;
+        font-size: 2vh;
 
     }
 
@@ -1744,13 +1777,13 @@ footer{
     .wrapper-texto-three h1{
         color: #000;
         margin:0;
-        font-size: 3vh;
+        font-size: 2vh;
     }
     
     .wrapper-texto-three span{
-        margin-top: 5%;
+        margin-top: 3%;
         color: #000;
-        font-size: 2vh;
+        font-size: 1.8vh;
     }
     
     .swiper-pagination-two{
