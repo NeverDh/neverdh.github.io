@@ -26,7 +26,7 @@ window.onload = function() {
     body.style.overflowY="visible";
     cook.style.display="flex"
     cookCon.style.display="grid"
-    tirar
+    tirar()
 
     // -----------------------------FIM LOADER E COOKIES--------------------------------- //
     setTimeout(animaWpp, 2000)
