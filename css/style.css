@@ -1590,7 +1590,7 @@ footer{
     }
     
     .wrapper-icon{
-        width: 40%;
+        width: 30%;
         height: 80%;
         flex-direction: column;
         justify-content: center;
@@ -1618,17 +1618,18 @@ footer{
     
     .container-texto a{
         color:#000;
-        font-size: 16px;
+        font-size: 2vh;
+        word-wrap: break-word;
     }
     
     .container-icone{
         width: 100%;
-        height: 50%;
+        height: 100%;
     }
     
     .container-icone img{
-        width: 80%;
-        height: 80%;
+        width: 60%;
+        height: 60%;
     }
     
     
@@ -2082,6 +2083,14 @@ footer{
 
         font-size: 3vw;
       }
+
+      .container-texto a{
+        color:#000;
+        font-size: 1.5vh;
+        word-wrap: break-word;
+    }
+
+      
 
 }
 
